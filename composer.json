@@ -1,0 +1,27 @@
+{
+    "name": "oneago/installer",
+    "description": "Oneago application installer",
+    "type": "library",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "jrueda",
+            "email": "jrueda@oneago.com",
+            "homepage": "https://www.juandavid.dev",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "symfony/console": "^5.1",
+        "symfony/process": "^5.1"
+    },
+    "bin": [
+        "bin/oneago"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Oneago\\Installer\\Console\\": "src/"
+        }
+    }
+}

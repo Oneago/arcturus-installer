@@ -1,0 +1,10 @@
+#!/usr/bin/env php
+<?php
+
+use Oneago\Installer\Console\NewCommand;
+
+require __DIR__ . '/../vendor/autoload.php';
+
+$app = new Symfony\Component\Console\Application('Oneago Installer', '1.0.0');
+$app->add(new NewCommand());
+$app->run();
