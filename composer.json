@@ -2,7 +2,7 @@
     "name": "oneago/installer",
     "description": "Oneago application installer",
     "type": "library",
-    "license": "proprietary",
+    "license": "MIT",
     "authors": [
         {
             "name": "jrueda",
