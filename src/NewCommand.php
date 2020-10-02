@@ -62,7 +62,7 @@ class NewCommand extends Command
         $composer = $this->findComposer();
 
         $commands = [
-            $composer . " create-project oneago/oneago-php-template \"$directory\"",
+            $composer . " create-project oneago/oneago-php-template \"$directory\" --remove-vcs --prefer-dist",
         ];
 
         if ($directory != '.' && $input->getOption('force')) {
