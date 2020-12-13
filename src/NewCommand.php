@@ -37,14 +37,33 @@ class NewCommand extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $output->write(PHP_EOL . '<fg=blue> ______
-/   __  \ __  ___     _____    ____  _   _____   ______
-|  |  |  |  |/   \  /  __  \ /  __ \| |/  __  \ /  __   \
-|  |  |  |    _   \|  |__|  |  |  |   |  |__|  |  |  |  |
-|  |  |  |   / \   |   _____|  |  |   |\____   |  |  |  |
-|  |  |  |  |   |  |  |   __|  |  |   |__   |  |  |  |  |
-|  |__|  |  |   |  |\  \_/ /|  |__|   |  |__|  |  |__|  |
- \______/|__|   |__| \____/  \_____/|_|\______/ \______/</>' . PHP_EOL . PHP_EOL);
+        $output->write(PHP_EOL . '<fg=blue>
+                                                                                                             
+                                                                                                             
+     OOOOOOOOO                                                                                               
+   OO:::::::::OO                                                                                             
+ OO:::::::::::::OO                                                                                           
+O:::::::OOO:::::::O                                                                                          
+O::::::O   O::::::Onnnn  nnnnnnnn        eeeeeeeeeeee    aaaaaaaaaaaaa     ggggggggg   ggggg   ooooooooooo   
+O:::::O     O:::::On:::nn::::::::nn    ee::::::::::::ee  a::::::::::::a   g:::::::::ggg::::g oo:::::::::::oo 
+O:::::O     O:::::On::::::::::::::nn  e::::::eeeee:::::eeaaaaaaaaa:::::a g:::::::::::::::::go:::::::::::::::o
+O:::::O     O:::::Onn:::::::::::::::ne::::::e     e:::::e         a::::ag::::::ggggg::::::ggo:::::ooooo:::::o
+O:::::O     O:::::O  n:::::nnnn:::::ne:::::::eeeee::::::e  aaaaaaa:::::ag:::::g     g:::::g o::::o     o::::o
+O:::::O     O:::::O  n::::n    n::::ne:::::::::::::::::e aa::::::::::::ag:::::g     g:::::g o::::o     o::::o
+O:::::O     O:::::O  n::::n    n::::ne::::::eeeeeeeeeee a::::aaaa::::::ag:::::g     g:::::g o::::o     o::::o
+O::::::O   O::::::O  n::::n    n::::ne:::::::e         a::::a    a:::::ag::::::g    g:::::g o::::o     o::::o
+O:::::::OOO:::::::O  n::::n    n::::ne::::::::e        a::::a    a:::::ag:::::::ggggg:::::g o:::::ooooo:::::o
+ OO:::::::::::::OO   n::::n    n::::n e::::::::eeeeeeeea:::::aaaa::::::a g::::::::::::::::g o:::::::::::::::o
+   OO:::::::::OO     n::::n    n::::n  ee:::::::::::::e a::::::::::aa:::a gg::::::::::::::g  oo:::::::::::oo 
+     OOOOOOOOO       nnnnnn    nnnnnn    eeeeeeeeeeeeee  aaaaaaaaaa  aaaa   gggggggg::::::g    ooooooooooo   
+                                                                                    g:::::g                  
+                                                                        gggggg      g:::::g                  
+                                                                        g:::::gg   gg:::::g                  
+                                                                         g::::::ggg:::::::g                  
+                                                                          gg:::::::::::::g                   
+                                                                            ggg::::::ggg                     
+                                                                               gggggg                        
+</>' . PHP_EOL . PHP_EOL);
 
         sleep(1);
         $name = $input->getArgument('name');
