@@ -22,7 +22,7 @@ class NewCommand extends Command
     protected function configure()
     {
         $this
-            ->setDescription('Create a new Oneago php application')
+            ->setDescription('Create a new Arcturus php application')
             ->addArgument('name', InputArgument::OPTIONAL)
             ->addOption('dev', 'd', InputOption::VALUE_NONE, 'Installs the latest "development" release')
             ->addOption('force', 'f', InputOption::VALUE_NONE, 'Forces install even if the directory already exists');
@@ -40,29 +40,32 @@ class NewCommand extends Command
         $output->write(PHP_EOL . '<fg=blue>
                                                                                                              
                                                                                                              
-     OOOOOOOOO                                                                                               
-   OO:::::::::OO                                                                                             
- OO:::::::::::::OO                                                                                           
-O:::::::OOO:::::::O                                                                                          
-O::::::O   O::::::Onnnn  nnnnnnnn        eeeeeeeeeeee    aaaaaaaaaaaaa     ggggggggg   ggggg   ooooooooooo   
-O:::::O     O:::::On:::nn::::::::nn    ee::::::::::::ee  a::::::::::::a   g:::::::::ggg::::g oo:::::::::::oo 
-O:::::O     O:::::On::::::::::::::nn  e::::::eeeee:::::eeaaaaaaaaa:::::a g:::::::::::::::::go:::::::::::::::o
-O:::::O     O:::::Onn:::::::::::::::ne::::::e     e:::::e         a::::ag::::::ggggg::::::ggo:::::ooooo:::::o
-O:::::O     O:::::O  n:::::nnnn:::::ne:::::::eeeee::::::e  aaaaaaa:::::ag:::::g     g:::::g o::::o     o::::o
-O:::::O     O:::::O  n::::n    n::::ne:::::::::::::::::e aa::::::::::::ag:::::g     g:::::g o::::o     o::::o
-O:::::O     O:::::O  n::::n    n::::ne::::::eeeeeeeeeee a::::aaaa::::::ag:::::g     g:::::g o::::o     o::::o
-O::::::O   O::::::O  n::::n    n::::ne:::::::e         a::::a    a:::::ag::::::g    g:::::g o::::o     o::::o
-O:::::::OOO:::::::O  n::::n    n::::ne::::::::e        a::::a    a:::::ag:::::::ggggg:::::g o:::::ooooo:::::o
- OO:::::::::::::OO   n::::n    n::::n e::::::::eeeeeeeea:::::aaaa::::::a g::::::::::::::::g o:::::::::::::::o
-   OO:::::::::OO     n::::n    n::::n  ee:::::::::::::e a::::::::::aa:::a gg::::::::::::::g  oo:::::::::::oo 
-     OOOOOOOOO       nnnnnn    nnnnnn    eeeeeeeeeeeeee  aaaaaaaaaa  aaaa   gggggggg::::::g    ooooooooooo   
-                                                                                    g:::::g                  
-                                                                        gggggg      g:::::g                  
-                                                                        g:::::gg   gg:::::g                  
-                                                                         g::::::ggg:::::::g                  
-                                                                          gg:::::::::::::g                   
-                                                                            ggg::::::ggg                     
-                                                                               gggggg                        
+
+                                                                                                                                                                       
+                                                                                                                                                                       
+               AAA                                                               tttt                                                                                  
+              A:::A                                                           ttt:::t                                                                                  
+             A:::::A                                                          t:::::t                                                                                  
+            A:::::::A                                                         t:::::t                                                                                  
+           A:::::::::A          rrrrr   rrrrrrrrr       ccccccccccccccccttttttt:::::ttttttt    uuuuuu    uuuuuu rrrrr   rrrrrrrrr   uuuuuu    uuuuuu      ssssssssss   
+          A:::::A:::::A         r::::rrr:::::::::r    cc:::::::::::::::ct:::::::::::::::::t    u::::u    u::::u r::::rrr:::::::::r  u::::u    u::::u    ss::::::::::s  
+         A:::::A A:::::A        r:::::::::::::::::r  c:::::::::::::::::ct:::::::::::::::::t    u::::u    u::::u r:::::::::::::::::r u::::u    u::::u  ss:::::::::::::s 
+        A:::::A   A:::::A       rr::::::rrrrr::::::rc:::::::cccccc:::::ctttttt:::::::tttttt    u::::u    u::::u rr::::::rrrrr::::::ru::::u    u::::u  s::::::ssss:::::s
+       A:::::A     A:::::A       r:::::r     r:::::rc::::::c     ccccccc      t:::::t          u::::u    u::::u  r:::::r     r:::::ru::::u    u::::u   s:::::s  ssssss 
+      A:::::AAAAAAAAA:::::A      r:::::r     rrrrrrrc:::::c                   t:::::t          u::::u    u::::u  r:::::r     rrrrrrru::::u    u::::u     s::::::s      
+     A:::::::::::::::::::::A     r:::::r            c:::::c                   t:::::t          u::::u    u::::u  r:::::r            u::::u    u::::u        s::::::s   
+    A:::::AAAAAAAAAAAAA:::::A    r:::::r            c::::::c     ccccccc      t:::::t    ttttttu:::::uuuu:::::u  r:::::r            u:::::uuuu:::::u  ssssss   s:::::s 
+   A:::::A             A:::::A   r:::::r            c:::::::cccccc:::::c      t::::::tttt:::::tu:::::::::::::::uur:::::r            u:::::::::::::::uus:::::ssss::::::s
+  A:::::A               A:::::A  r:::::r             c:::::::::::::::::c      tt::::::::::::::t u:::::::::::::::ur:::::r             u:::::::::::::::us::::::::::::::s 
+ A:::::A                 A:::::A r:::::r              cc:::::::::::::::c        tt:::::::::::tt  uu::::::::uu:::ur:::::r              uu::::::::uu:::u s:::::::::::ss  
+AAAAAAA                   AAAAAAArrrrrrr                cccccccccccccccc          ttttttttttt      uuuuuuuu  uuuurrrrrrr                uuuuuuuu  uuuu  sssssssssss    
+                                                                                                                                                                       
+                                                                                                                                                                       
+                                                                                                                                                                       
+                                                                                                                                                                       
+                                                                                                                                                                       
+                                                                                                                                                                       
+                                                                                                                                                                                               
 </>' . PHP_EOL . PHP_EOL);
 
         sleep(1);
@@ -81,7 +84,7 @@ O:::::::OOO:::::::O  n::::n    n::::ne::::::::e        a::::a    a:::::ag:::::::
         $composer = $this->findComposer();
 
         $commands = [
-            $composer . " create-project oneago/oneago-php-template \"$directory\" --remove-vcs --prefer-dist",
+            $composer . " composer create-project oneago/arcturus-project \"$directory\" --remove-vcs --prefer-dist",
         ];
 
         if ($directory != '.' && $input->getOption('force')) {
@@ -93,7 +96,7 @@ O:::::::OOO:::::::O  n::::n    n::::ne::::::::e        a::::a    a:::::ag:::::::
         }
 
         if (PHP_OS_FAMILY != 'Windows') {
-            $commands[] = "chmod 755 \"$directory/oneago\"";
+            $commands[] = "chmod 755 \"$directory/ada\"";
         }
 
         if (($process = $this->runCommands($commands, $output))) {

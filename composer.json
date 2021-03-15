@@ -1,6 +1,6 @@
 {
     "name": "oneago/installer",
-    "description": "Oneago application installer",
+    "description": "Arcturus framework installer",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -13,8 +13,8 @@
     ],
     "require": {
         "php": ">=7.2",
-        "symfony/console": "^5.1",
-        "symfony/process": "^5.1"
+        "symfony/console": "^5.2",
+        "symfony/process": "^5.2"
     },
     "bin": [
         "bin/oneago"
