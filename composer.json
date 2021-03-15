@@ -17,7 +17,7 @@
         "symfony/process": "^5.2"
     },
     "bin": [
-        "bin/oneago"
+        "bin/arcturus"
     ],
     "autoload": {
         "psr-4": {
