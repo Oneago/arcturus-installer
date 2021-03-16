@@ -84,7 +84,7 @@ AAAAAAA                   AAAAAAArrrrrrr                cccccccccccccccc        
         $composer = $this->findComposer();
 
         $commands = [
-            $composer . " composer create-project oneago/arcturus-project \"$directory\" --remove-vcs --prefer-dist",
+            $composer . " create-project oneago/arcturus-project \"$directory\" --remove-vcs --prefer-dist",
         ];
 
         if ($directory != '.' && $input->getOption('force')) {
