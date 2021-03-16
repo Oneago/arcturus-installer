@@ -22,7 +22,7 @@ Add into Windows system variables this `%USERPROFILE%\AppData\Roaming\Composer\v
 ````
 nano ~/.bashrc
 ````
-add into new line `export PATH="$HOME/.config/composer/vendor/bin` or `export PATH="$HOME/.composer/vendor/bin:$PATH"`
+add into new line `export PATH="$PATH:$HOME/.config/composer/vendor/bin"` or `export PATH="$HOME/.composer/vendor/bin:$PATH"`
 
 finally run 
 
